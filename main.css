@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("images/pokeball.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+html {
+	height: 100%;
+}
+
+#container {
+	max-width: 90%;
+	margin: auto;
+}
+
+.ash {
+	width: 10%;
+	position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+
+h1{
+	text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  position: fixed;
+  bottom: 3%;
+  left: 14%;
+
+}
+
+.grid-item {
+ 
+}
+
+.grid-item img{
+	border-radius: 50%;
+	width: 60%;
+	padding: 5px;
+}
+
+.water {
+	background-color: blue;
+}
+
+.grass {
+	background-color: green;
+}
