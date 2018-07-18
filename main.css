@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url("images/pokeball.jpg");
+	background-image: url("https://www.uxfree.com/wp-content/uploads/2017/03/pokemon-logo-on-gradient.png");
 	background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -45,6 +45,11 @@ h1{
 	padding: 5px;
 }
 
+.grid-item img:hover {
+	border: 5px solid #ffffff;
+	cursor: pointer;
+}
+
 .water {
 	background-color: #4592C4;
 }
@@ -54,5 +59,13 @@ h1{
 }
 
 .fire {
-	
+	background-color: #FD7D24;
+}
+
+.electric {
+	background-color: #EED535;
+}
+
+.poison {
+	background-color: #B97FC9;
 }
