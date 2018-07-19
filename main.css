@@ -3,7 +3,9 @@ body {
 	padding: 0;
 	background-image: url("https://www.uxfree.com/wp-content/uploads/2017/03/pokemon-logo-on-gradient.png");
 	background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100%;
+    font-family: 'Lora', serif;
+    color: #ffffff;
 }
 
 html {
@@ -35,10 +37,6 @@ h1{
 
 }
 
-.grid-item {
- 
-}
-
 .grid-item img{
 	border-radius: 50%;
 	width: 60%;
@@ -68,4 +66,35 @@ h1{
 
 .poison {
 	background-color: #B97FC9;
+}
+
+.box{
+	width: 400px;
+	height: 400px;
+	background-color: rgba(255, 255, 255, 0.4);
+	overflow-wrap: break-word;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
+
+#description{
+	text-align: center;
+	font-size: 28px;
+}
+
+#pokemon {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 20px;
+	max-width: 95%;
+	margin: auto;
+}
+
+#pokemon img {
+	width: 100%;
+}
+
+#stats {
+	font-size: 46px;
 }

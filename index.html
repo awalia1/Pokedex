@@ -3,6 +3,7 @@
 <head>
 	<title>Pokedex</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
 <body>
 	
@@ -20,18 +21,31 @@
 
 <p id="demo"></p> -->
 
-	<h1> Amarpreet Walia's Pokedex</h1>	
+	<h1 id="name"> Amarpreet Walia's Pokedex</h1>	
+
 	<div id="container">
+		<div id="pokemon">
+			<div id="description" class="box">
+			
+			</div>
+			<div id="stats" class="box">
+		
+			</div>
+	
+			
+			</div>
+
 		<img class="ash" src="images/ash_ketchum.jpg">
 		<div class="grid-container">
-		  <div class="grid-item"><img class= "water" src="images/squirtle.jpg"  onclick="DoSomething()"></div>
-		  <div class="grid-item"><img class= "grass" src="images/venusaur.jpg"></div>
-		  <div class="grid-item"><img class= "electric" src="images/pikachu.jpg"></div>
-		  <div class="grid-item"><img class= "poison"src="images/nidoking.jpg"></div>
-		  <div class="grid-item"><img class= "fire" src="images/charizard.jpg"></div>
+		  <div class="grid-item"><img class= "water" src="images/squirtle.jpg" onclick="squirtleClick()"></div>
+		  <div class="grid-item"><img class= "grass" src="images/venusaur.jpg" onclick="venusaurClick()"></div>
+		  <div class="grid-item"><img class= "electric" src="images/pikachu.jpg" onclick="pikachuClick()"></div>
+		  <div class="grid-item"><img class= "poison"src="images/nidoking.jpg" onclick="nidokingClick()"></div>
+		  <div class="grid-item"><img class= "fire" src="images/charizard.jpg" onclick="charizardClick()"></div>
 		</div>
 	</div>
 
+	<!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
 	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
