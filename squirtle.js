@@ -1,63 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Example</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-</head>
-<body>
-
-<h1 id="name"> Amarpreet Walia's Pokedex</h1>	
-
-	<div id="container">
-		<div id="pokemon">
-			<div id="description">
-				<p id="abilities"> </p>
-	
-			</div>
-			<div id="stats">
-				<p id="hp"></p>
-				<p id="atk"></p>
-				<p id="def"></p>
-
-			</div>
-
-			<img id="big-pokemon" src="">
-		</div>
-
-		<img class="ash" src="images/ash_ketchum.jpg">
-		<div class="grid-container">
-		  <div class="grid-item"><img class= "water" src="images/squirtle.jpg" onclick="squirtleClick()"></div>
-		  <div class="grid-item"><img class= "grass" src="images/venusaur.jpg" onclick="venusaurClick()"></div>
-		  <div class="grid-item"><img class= "electric" src="images/pikachu.jpg" onclick="pikachuClick()"></div>
-		  <div class="grid-item"><img class= "poison"src="images/nidoking.jpg" onclick="nidokingClick()"></div>
-		  <div class="grid-item"><img class= "fire" src="images/charizard.jpg" onclick="charizardClick()"></div>
-		</div>
-	</div>
-
-<script>
-
-class Pokemon {
-	constructor(name, def, atk, hp, ability1, ability2, id, imgSrc, bgImg, description){
-		this.name = name;
-		this.defense = def;
-		this.attack = atk;
-		this.hp = hp;
-		this.ability1 = ability1;
-		this.ability2 = ability2;
-		this.imgSrc = imgSrc;
-		this.bgImg = bgImg;
-		this.description = description
-	}
-}
-
 function squirtleClick(){
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
 
-        let squirtle = new Pokemon(
+        let Squirtle = new Pokemon(
 		  	this.name = myObj.name,
 		  	this.hp = myObj.stats[5].base_stat,
 		  	this.atk = myObj.stats[4].base_stat,
@@ -100,14 +47,3 @@ xmlhttp.onreadystatechange = function() {
 	xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/squirtle.txt", true);
 	xmlhttp.send();
 	}
-
-	
-
-
-
-</script>
-
-
-
-</body>
-</html>
