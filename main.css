@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	background-image: url("https://www.uxfree.com/wp-content/uploads/2017/03/pokemon-logo-on-gradient.png");
 	background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     font-family: 'Lora', serif;
     color: #ffffff;
 }
@@ -76,6 +76,7 @@ h1{
 	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
+	margin-top: 5px;
 }
 
 #description{
