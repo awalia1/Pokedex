@@ -44,6 +44,7 @@ xmlhttp.onreadystatechange = function() {
 	    hp.innerHTML= "HP: " + this.hp;
 	    }
 	};
-	xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/squirtle.txt", true);
+	xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
+	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/txt-files/squirtle.txt", true);
 	xmlhttp.send();
 	}

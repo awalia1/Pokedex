@@ -14,7 +14,7 @@ xmlhttp.onreadystatechange = function() {
 		  	this.id = "34",
 			this.imgSrc = "images/nidoking-big.jpg",
 			this.bgImg = "url(images/poison.jpg)",
-			this.description = "Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it."
+			this.description = "Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokemon goes on a rampage, there is no stopping it."
 		  	)
      
         var a = document.getElementById('pokemon');
@@ -45,6 +45,6 @@ xmlhttp.onreadystatechange = function() {
 	    }
 	};
 	xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/34/", true);
-	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/nidoking.txt", true);
+	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/txt-files/nidoking.txt", true);
 	xmlhttp.send();
 	}

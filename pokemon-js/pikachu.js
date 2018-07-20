@@ -14,7 +14,7 @@ xmlhttp.onreadystatechange = function() {
 		  	this.id = "25",
 			this.imgSrc = "images/pikachu-big.jpg",
 			this.bgImg = "url(images/electric.jpg)",
-			this.description = "Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge."
+			this.description = "Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokemon mistook the intensity of its charge."
 		  	)
      
         var a = document.getElementById('pokemon');
@@ -45,6 +45,6 @@ xmlhttp.onreadystatechange = function() {
 	    }
 	};
 	xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/25/", true);
-	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/pikachu.txt", true);
+	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/txt-files/pikachu.txt", true);
 	xmlhttp.send();
 	}

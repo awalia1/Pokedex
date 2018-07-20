@@ -45,6 +45,6 @@ xmlhttp.onreadystatechange = function() {
 	    }
 	};
 	xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/3/", true);
-	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/venusaur.txt", true);
+	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/txt-files/venusaur.txt", true);
 	xmlhttp.send();
 	}
