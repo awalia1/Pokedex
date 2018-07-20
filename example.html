@@ -3,6 +3,7 @@
 <head>
 	<title>Example</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
 <body>
 
@@ -36,11 +37,39 @@
 
 <script>
 
+class Pokemon {
+	constructor(name, def, atk, hp, ability1, ability2, id, imgSrc, bgImg, description){
+		this.name = name;
+		this.defense = def;
+		this.attack = atk;
+		this.hp = hp;
+		this.ability1 = ability1;
+		this.ability2 = ability2;
+		this.imgSrc = imgSrc;
+		this.bgImg = bgImg;
+		this.description = description
+	}
+}
+
 function squirtleClick(){
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
+
+         let squirtle = new Pokemon(
+		  	this.name = myObj.name,
+		  	this.hp = myObj.stats[5].base_stat,
+		  	this.atk = myObj.stats[4].base_stat,
+		  	this.def = myObj.stats[3].base_stat,
+		  	this.ability1 = myObj.abilities[0].ability.name,
+		  	this.ability2 = myObj.abilities[1].ability.name,
+		  	this.id = "7",
+			this.imgSrc = "images/squirtle-big.jpg",
+			this.bgImg = "url(images/water.jpg)",
+			this.description = "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds."
+		  	)
+       
         var a = document.getElementById('pokemon');
 		var b = document.getElementById("description");
 		var c = document.getElementById("stats");
@@ -48,24 +77,24 @@ xmlhttp.onreadystatechange = function() {
 	b.classList.add("box");
 	c.classList.add("box");
 
-	document.body.style.backgroundImage = 'url(images/water.jpg)';
+	document.body.style.backgroundImage = this.bgImg;
 
-	document.getElementById("name").innerHTML = myObj.name;
+	document.getElementById("name").innerHTML = this.name;
 
-   	document.getElementById("big-pokemon").src = 'images/squirtle-big.jpg';
+   	document.getElementById("big-pokemon").src = this.imgSrc;
 
-    b.innerHTML = "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds.";
+    b.innerHTML = this.description;
     var ability = document.createElement('p');
-    ability.innerHTML = "This Pokemon's abilties include water and not."
+    ability.innerHTML = "This Pokemon's abilties include " + this.ability1 + " and " + this.ability2 + "."
     b.appendChild(ability);
 
-    var hp = document.getElementById('hp');
-    var atk = document.getElementById('atk');
     var def = document.getElementById('def');
+    var atk = document.getElementById('atk');
+    var hp = document.getElementById('hp');
 
-    hp.innerHTML= "HP: 90";
-    atk.innerHTML= "ATK: 90";
-    def.innerHTML= "DEF: 90";
+    def.innerHTML= "DEF: " + this.def;
+    atk.innerHTML= "ATK: " + this.atk;
+    hp.innerHTML= "HP: " + this.hp;
     }
 };
 xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/squirtle.txt", true);

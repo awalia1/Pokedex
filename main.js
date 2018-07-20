@@ -106,14 +106,16 @@ function charizardClick() {
 
 class Pokemon {
 	constructor(){
-		this.name = "myobj.name";
-		this.defense = "myObj.stats[3].base_stat";
-		this.attack = "myObj.stats[4].base_stat";
-		// this.hp = myObj.stats[5].base_stat;
-		// this.ability1 = myObj.abilities[0].ability.name;
-		// this.ability2 = myObj.abilities[1].ability.name;
+		this.name = name;
+		this.defense = stats[3].base_stat;
+		this.attack = stats[4].base_stat;
+		this.hp = stats[5].base_stat;
+		this.ability1 = abilities[0].ability.name;
+		this.ability2 = abilities[1].ability.name;
 	}
 }
+
+// let squirtle = new Pokemon; 
 
 class Squirtle extends Pokemon {
 	constructor(){
@@ -122,7 +124,6 @@ class Squirtle extends Pokemon {
 		this.imgSrc = "images/squirtle-big.jpg";
 		this.bgImg = "images/water.jpg";
 		this.description = "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds.";
-		update(this);
 	}
 }
 
@@ -133,7 +134,6 @@ class Venasaur extends Pokemon {
 		this.imgSrc = "images/venasaur-big.jpg";
 		this.bgImg = "images/grass.jpg";
 		this.description = "There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.";
-		update(this);
 	}
 }
 
@@ -144,7 +144,6 @@ class Pikachu extends Pokemon {
 		this.imgSrc = "images/pikachu-big.jpg";
 		this.bgImg = "images/electric.jpg";
 		this.description = "Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge."
-		update(this);
 	}
 }
 
@@ -155,7 +154,6 @@ class Nidoking extends Pokemon {
 		this.imgSrc = "images/nidoking-big.jpg";
 		this.bgImg = "images/poison.jpg";
 		this.description = "Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it."
-		update(this);
 	}
 }
 
@@ -166,7 +164,6 @@ class Charizard extends Pokemon {
 		this.imgSrc = "images/charizard-big.jpg";
 		this.bgImg = "images/fire.jpg";
 		this.description = "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself."
-		update(this);
 	}
 }
 
