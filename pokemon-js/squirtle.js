@@ -20,7 +20,11 @@ xmlhttp.onreadystatechange = function() {
         var a = document.getElementById('pokemon');
 		var b = document.getElementById("description");
 		var c = document.getElementById("stats");
+		var d = document.getElementById('big-pokemon');
 
+		b.classList.remove("invisible");
+		c.classList.remove("invisible");
+		d.classList.remove("invisible");
 		b.classList.add("box");
 		c.classList.add("box");
 
