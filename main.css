@@ -33,18 +33,18 @@ html {
   width: 10%;
   position: absolute;
   bottom: 15px;
-  left: 20px; 
+  left: 20px;
   cursor: pointer; }
 
 h1 {
-  text-align: center; 
-  color:#FFCC03!important;
+  text-align: center;
+  color: #FFCC03 !important;
   text-shadow: 0 0 20px #3A5AA5, 0 0 20px #3A5AA5, 0 0 20px #3A5AA5;
   font-size: 36px;
   letter-spacing: 2px; }
 
 h1:first-letter {
-    text-transform:capitalize; }
+  text-transform: capitalize; }
 
 .grid-container {
   display: grid;
