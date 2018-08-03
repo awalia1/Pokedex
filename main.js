@@ -1,3 +1,12 @@
+allPokemon = [];
+
+trainer = {
+	name: "Walia",
+	all: function() {
+		return allPokemon;
+	}
+}
+
 class Pokemon {
 	constructor(name, def, atk, hp, ability1, ability2, id, imgSrc, bgImg, description){
 		this.name = name;
@@ -9,6 +18,7 @@ class Pokemon {
 		this.imgSrc = imgSrc;
 		this.bgImg = bgImg;
 		this.description = description
+		allPokemon.push(this);
 	}
 }
 
