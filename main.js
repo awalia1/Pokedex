@@ -3,6 +3,7 @@ allPokemon = [];
 trainer = {
 	name: "Walia",
 	all: function() {
+			//source: https://ilikekillnerds.com/2016/05/removing-duplicate-objects-array-property-name-javascript/
 			function removeDuplicates(myArr, prop) {
     			return myArr.filter((obj, pos, arr) => {
         			return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
