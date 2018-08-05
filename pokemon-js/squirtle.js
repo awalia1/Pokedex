@@ -4,7 +4,7 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
 
-        let Squirtle = new Pokemon(
+        let squirtle = new Pokemon(
 		  	this.name = myObj.name,
 		  	this.hp = myObj.stats[5].base_stat,
 		  	this.atk = myObj.stats[4].base_stat,
@@ -15,7 +15,7 @@ xmlhttp.onreadystatechange = function() {
 			this.imgSrc = "images/squirtle-big.jpg",
 			this.bgImg = "url(images/water.jpg)",
 			this.description = "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds."
-		  	)
+		)
      
         var a = document.getElementById('pokemon');
 		var b = document.getElementById("description");
@@ -48,7 +48,7 @@ xmlhttp.onreadystatechange = function() {
 	    hp.innerHTML= "HP: " + this.hp;
 	    }
 	};
-	xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
-	// xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/txt-files/squirtle.txt", true);
+	// xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
+	xmlhttp.open("GET", "https://raw.githubusercontent.com/awalia1/Pokedex/master/txt-files/squirtle.txt", true);
 	xmlhttp.send();
 	}

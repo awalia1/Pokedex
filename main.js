@@ -3,8 +3,13 @@ allPokemon = [];
 trainer = {
 	name: "Walia",
 	all: function() {
-		return allPokemon;
-	}
+			function removeDuplicates(myArr, prop) {
+    			return myArr.filter((obj, pos, arr) => {
+        			return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+    			});
+			}
+    		return removeDuplicates(allPokemon, 'name');
+		}
 }
 
 class Pokemon {
@@ -17,7 +22,7 @@ class Pokemon {
 		this.ability2 = ability2;
 		this.imgSrc = imgSrc;
 		this.bgImg = bgImg;
-		this.description = description
+		this.description = description;
 		allPokemon.push(this);
 	}
 }
